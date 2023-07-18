@@ -23,7 +23,7 @@ const createTask = async (req, res) => {
                     }))
                } catch (error) {
                     console.log('error in subtask creation:', error)
-                    res.status(500).send({ mesesage: error.message, error });
+                    res.status(500).send({ message: error.message, error });
                     return;
                }
           }
@@ -40,7 +40,7 @@ const createTask = async (req, res) => {
           res.status(201).send({ message: `Task Created Successfully in ${board.name}` });
      } catch (error) {
           console.log('error:', error);
-          res.status(500).send({ mesesage: error.message, error });
+          res.status(500).send({ message: error.message, error });
      }
 }
 
