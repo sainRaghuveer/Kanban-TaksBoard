@@ -17,7 +17,7 @@ import LazyLoadHandler from '../components/LazyLoadHandler';
 // const Error = lazyLoad('./components/Error');
 // const TaskSection = lazyLoad('./components/TaskSection');
 
-const Error = lazy(()=> import('../components/Error'));
+const Error = lazy(() => import('../components/Error'));
 const TaskSection = lazy(() => import('../components/TaskSection'));
 
 

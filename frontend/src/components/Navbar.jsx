@@ -19,15 +19,18 @@ import {
      Select,
      Textarea,
      Input,
+     useColorMode,
 } from '@chakra-ui/react';
 import { useDispatch, useSelector } from 'react-redux';
 import useToastMsg from '../customHooks/useToastMsg';
 import { postTask } from '../redux/tasks/tasks.actions';
+import { MoonIcon, SunIcon } from '@chakra-ui/icons';
 
 function Navbar() {
      const { data } = useSelector(store => store.tasksManager);
-     const { isOpen, onOpen, onClose } = useDisclosure()
+     const { isOpen, onOpen, onClose } = useDisclosure();
      const [subtasks, setSubtasks] = useState([""]);
+     const { colorMode, toggleColorMode } = useColorMode();
      const dispatch = useDispatch();
      const toastMsg = useToastMsg();
 
@@ -72,7 +75,7 @@ function Navbar() {
                          <NavLink to="/">
                               <HStack>
                                    <FaTasks fontSize="20px" />
-                                   <Heading display={{base: 'none', sm: 'inline-block'}} size='md'>Kanban Board</Heading>
+                                   <Heading display={{ base: 'none', sm: 'inline-block' }} size='md'>Kanban Board</Heading>
                               </HStack>
                          </NavLink>
                     </Box>
