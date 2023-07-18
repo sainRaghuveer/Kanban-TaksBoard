@@ -12,6 +12,7 @@ import {
      InputRightElement,
      Text,
      Heading,
+     VStack,
 } from '@chakra-ui/react';
 import { ViewIcon, ViewOffIcon } from '@chakra-ui/icons';
 import { useDispatch, useSelector } from 'react-redux';
@@ -47,72 +48,70 @@ function Signup() {
      }
 
      return (
-          <Flex
-               minH="100vh"
-               align={'center'}
-               justify={'center'}
-               bg={useColorModeValue('gray.50', 'gray.800')}>
-               <Stack spacing={8} mx={'auto'} maxW={'lg'}>
-                    <Stack align={'center'}>
-                         <Heading fontSize={'4xl'} textAlign={'center'}>
-                              Sign-up on Kanban
-                         </Heading>
-                         <Text fontSize={'lg'} color={'gray.600'}>
-                              to maintain your tasks easily ✌️
-                         </Text>
-                    </Stack>
-                    <Box
-                         rounded={'lg'}
-                         bg={useColorModeValue('white', 'gray.700')}
-                         boxShadow={'lg'}
-                         p={8}>
-                         <Stack spacing={4}>
-                              <FormControl id="username">
-                                   <FormLabel>Username</FormLabel>
-                                   <Input type="text" ref={userNameRef} />
-                              </FormControl>
-                              <FormControl id="email">
-                                   <FormLabel>Email address</FormLabel>
-                                   <Input type="email" ref={emailRef} />
-                              </FormControl>
-                              <FormControl id="password">
-                                   <FormLabel>Password</FormLabel>
-                                   <InputGroup>
-                                        <Input type={showPassword ? 'text' : 'password'} ref={pwdRef} />
-                                        <InputRightElement h={'full'}>
-                                             <span
-                                                  role='button'
-                                                  variant={'ghost'}
-                                                  onClick={() =>
-                                                       setShowPassword((showPassword) => !showPassword)
-                                                  }>
-                                                  {showPassword ? <ViewOffIcon /> : <ViewIcon />}
-                                             </span>
-                                        </InputRightElement>
-                                   </InputGroup>
-                              </FormControl>
-                              <Stack spacing={10}>
-                                   <Button
-                                        isLoading={loading}
-                                        loadingText='Wait'
-                                        onClick={handleSignup}
-                                        bg={'blue.400'}
-                                        color={'white'}
-                                        _hover={{
-                                             bg: 'blue.500',
-                                        }}>
-                                        Sign up
-                                   </Button>
-                              </Stack>
-                              <Stack pt={6}>
-                                   <Text align={'center'}>
-                                        Already a user? <Link to="/signin" style={{ color: 'blue' }}>Sign-in</Link>
-                                   </Text>
-                              </Stack>
+          <>
+          <Box
+                display="flex"
+                justifyContent="center"
+                p={3}
+                bg="white"
+                w={{base:"100%", md:"50%", lg:"50%", xl:"35%"}}
+                m="40px auto 15px auto"
+                borderRadius="lg"
+                borderWidth="1px"
+            >
+                <Text fontSize="4xl" fontFamily="sans-serif">
+                    Create Account
+                </Text>
+            </Box>
+               <Box border="1px solid gray" w={{base:"100%", md:"50%", lg:"50%", xl:"35%"}} margin="auto" marginTop="70px" borderRadius="10px">
+                    <VStack spacing="5px"w={{base:"100%"}} margin="auto" padding="20px" marginTop="40px" borderRadius="10px"
+                         bg={useColorModeValue('gray.50', 'gray.800')}>
+                         <FormControl id="username" isRequired>
+                              <FormLabel>Username</FormLabel>
+                              <Input type="text" ref={userNameRef} placeholder="Username" />
+                         </FormControl>
+                         <FormControl id='email' isRequired>
+                              <FormLabel>Email</FormLabel>
+                              <Input type="email" ref={emailRef} placeholder='Email' />
+                         </FormControl>
+                         <FormControl id='password' isRequired>
+                              <FormLabel>Password</FormLabel>
+                              <InputGroup size="md">
+                                   <Input type={showPassword ? 'text' : 'password'} ref={pwdRef} placeholder='Password' />
+                                   <InputRightElement width="4.5rem">
+                                        <span
+                                             role='button'
+                                             variant={'ghost'}
+                                             onClick={() =>
+                                                  setShowPassword((showPassword) => !showPassword)
+                                             }>
+                                             {showPassword ? <ViewOffIcon /> : <ViewIcon />}
+                                        </span>
+                                   </InputRightElement>
+                              </InputGroup>
+                         </FormControl>
+                         <Stack spacing={10} w="100%">
+                              <Button
+                                   w="100%"
+                                   isLoading={loading}
+                                   loadingText='Wait'
+                                   onClick={handleSignup}
+                                   bg={'blue.400'}
+                                   color={'white'}
+                                   _hover={{
+                                        bg: 'blue.500',
+                                   }}>
+                                   Sign up
+                              </Button>
                          </Stack>
-                    </Box>
-               </Stack>
-          </Flex>
+                         <Stack pt={6}>
+                              <Text align={'center'}>
+                                   Already a user? <Link to="/signin" style={{ color: 'blue' }}>Sign in</Link>
+                              </Text>
+                         </Stack>
+                    </VStack>
+               </Box>
+          </>
      )
 }
 
