@@ -22,14 +22,14 @@ function TaskSection({ title }) {
      return (<Droppable droppableId={title + "_section"}>
           {(provided, snapshot) =>
                <Box
-               border={title=="Todo" ? "1px solid #635fc8" : title=="Doing"?"1px solid #ffa500":"1px solid #008e47"}
+               border={title=="Todo" ? "2px solid #635fc8" : title=="Doing"?"2px solid #ffa500":"2px solid #008e47"}
                     className={`task-section ${snapshot.isDraggingOver && 'task-dragging-over'}`}
                     ref={provided.innerRef}
                     {...provided.droppableProps}
                >
                     <Text className='subHeading-text' data-title={title}>{title} ({filteredTasks?.length})</Text>
                     {
-                         filteredTasks?.map((el, i) => <Task key={i} t={el} index={i} />)
+                        filteredTasks.length==0?<Box className='no-task'>😒 Empty</Box>:filteredTasks?.map((el, i) => <Task key={i} t={el} index={i} />)
                     }
                     {provided.placeholder}
                </Box>
