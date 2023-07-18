@@ -44,7 +44,7 @@ export const signin = (cred, navigate, toastMsg) => async (dispatch) => {
 
           // * IF TOKEN EXPIRED
           if (res.status === 401) {
-               dispatch({ type: AUTH_LOGOUT })
+               dispatch({ type: authTypes.AUTH_LOGOUT })
                alert(`Session Expired! \n Please Login again.. ${navigate ? navigate('/signin') : window.location.replace('/signin')}`)
                return;
           }
@@ -121,7 +121,7 @@ export const signup = (cred, navigate, toastMsg) => async (dispatch) => {
 
           // * IF TOKEN EXPIRED
           if (res.status === 401) {
-               dispatch({ type: AUTH_LOGOUT })
+               dispatch({ type: authTypes.AUTH_LOGOUT })
                alert(`Session Expired! \n Please Login again.. ${navigate ? navigate('/signin') : window.location.replace('/signin')}`)
                return;
           }

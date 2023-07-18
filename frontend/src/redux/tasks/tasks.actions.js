@@ -1,3 +1,4 @@
+import { AUTH_LOGOUT } from '../auth/auth.types';
 import * as taskTypes from './tasks.types';
 let abortController;
 
