@@ -25,7 +25,7 @@ export const reducer = (state = initialState, { type, payload }) => {
                return { ...state, loading: false, error: { status: false, message: '' } };
           }
 
-          case boardTypes.GET_BOARD_SUCCES: {
+          case boardTypes.GET_BOARD_SUCCESS: {
                return { loading: false, error: { status: false, message: '' }, data: payload };
           }
 

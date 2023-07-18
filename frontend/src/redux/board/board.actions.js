@@ -30,7 +30,7 @@ export const getBoards = (navigate) => async (dispatch) => {
           const data = await res.json();
 
           if (res.ok) {
-               dispatch({ type: boardTypes.GET_BOARD_SUCCES, payload: data })
+               dispatch({ type: boardTypes.GET_BOARD_SUCCESS, payload: data })
           } else {
                dispatch({ type: boardTypes.BOARD_ERROR, payload: data.message })
           }
