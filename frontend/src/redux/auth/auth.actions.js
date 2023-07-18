@@ -32,7 +32,7 @@ export const signin = (cred, navigate, toastMsg) => async (dispatch) => {
      dispatch({ type: authTypes.AUTH_LOADING });
 
      try {
-          const res = await fetch(`http://localhost:8080/signin`, {
+          const res = await fetch(`https://kanban-board-app-50he.onrender.com/signin`, {
                method: 'POST',
                body: JSON.stringify(cred),
                headers: {
@@ -108,7 +108,7 @@ export const signup = (cred, navigate, toastMsg) => async (dispatch) => {
      dispatch({ type: authTypes.AUTH_LOADING });
 
      try {
-          const res = await fetch(`http://localhost:8080/signup`, {
+          const res = await fetch(`https://kanban-board-app-50he.onrender.com/signup`, {
                method: "POST",
                body: JSON.stringify(cred),
                headers: {

@@ -21,7 +21,7 @@ export const getBoards = (navigate) => async (dispatch) => {
      dispatch({ type: boardTypes.BOARD_LOADING })
 
      try {
-          const res = await fetch(`http://localhost:8080/board`, {
+          const res = await fetch(`https://kanban-board-app-50he.onrender.com/board`, {
                method: 'GET',
                headers: {
                     'authorization': sessionStorage.getItem("TOKEN"),
@@ -55,7 +55,7 @@ export const createBoard = (boardName) => async (dispatch) => {
      dispatch({ type: boardTypes.BOARD_LOADING });
 
      try {
-          const res = await fetch(`http://localhost:8080/board`, {
+          const res = await fetch(`https://kanban-board-app-50he.onrender.com/board`, {
                method: 'POST',
                body: JSON.stringify({ name: boardName }),
                headers: {
@@ -92,7 +92,7 @@ export const editBoard = (boardId, boardName) => async (dispatch) => {
      dispatch({ type: boardTypes.BOARD_LOADING });
 
      try {
-          const res = await fetch(`http://localhost:8080/board/${boardId}`, {
+          const res = await fetch(`https://kanban-board-app-50he.onrender.com/board/${boardId}`, {
                method: 'PATCH',
                body: JSON.stringify({ name: boardName }),
                headers: {
@@ -127,7 +127,7 @@ export const deleteBoard = (boardId) => async (dispatch) => {
      dispatch({ type: boardTypes.BOARD_LOADING });
 
      try {
-          const res = await fetch(`http://localhost:8080/board/${boardId}`, {
+          const res = await fetch(`https://kanban-board-app-50he.onrender.com/board/${boardId}`, {
                method: 'DELETE',
                headers: {
                     'authorization': sessionStorage.getItem("TOKEN"),

@@ -29,7 +29,7 @@ export const getTasks = (boardId, navigate) => async (dispatch) => {
      abortController = new AbortController();
 
      try {
-          const res = await fetch(`http://localhost:8080/board/${boardId}`, {
+          const res = await fetch(`https://kanban-board-app-50he.onrender.com/board/${boardId}`, {
                signal: abortController.signal,
                method: "GET",
                headers: {
@@ -79,7 +79,7 @@ export const postTask = (boardId, task, toastMsg) => async (dispatch) => {
      dispatch({ type: taskTypes.TASKS_LOADING })
 
      try {
-          const res = await fetch(`http://localhost:8080/task/${boardId}`, {
+          const res = await fetch(`https://kanban-board-app-50he.onrender.com/${boardId}`, {
                method: "POST",
                body: JSON.stringify(task),
                headers: {
@@ -133,7 +133,7 @@ export const updateTask = (taskId, boardId, updates, toastMsg) => async (dispatc
      dispatch({ type: taskTypes.TASKS_LOADING });
 
      try {
-          const res = await fetch(`http://localhost:8080/task/${taskId}`, {
+          const res = await fetch(`https://kanban-board-app-50he.onrender.com/task/${taskId}`, {
                method: "PATCH",
                body: JSON.stringify(updates),
                headers: {
@@ -187,7 +187,7 @@ export const deleteTask = (taskId, boardId, toastMsg) => async (dispatch) => {
      dispatch({ type: taskTypes.TASKS_LOADING });
 
      try {
-          const res = await fetch(`http://localhost:8080/task/${taskId}`, {
+          const res = await fetch(`https://kanban-board-app-50he.onrender.com/task/${taskId}`, {
                method: "DELETE",
                body: JSON.stringify({ boardId }),
                headers: {
@@ -242,7 +242,7 @@ export const postSubTask = (taskId, boardId, subTasks, toastMsg) => async (dispa
      dispatch({ type: taskTypes.TASKS_LOADING })
 
      try {
-          const res = await fetch(`http://localhost:8080/subtask/${taskId}`, {
+          const res = await fetch(`https://kanban-board-app-50he.onrender.com/subtask/${taskId}`, {
                method: "POST",
                body: JSON.stringify(subTasks),
                headers: {
@@ -296,7 +296,7 @@ export const updateSubTask = (subTaskId, boardId, updates, toastMsg) => async (d
      dispatch({ type: taskTypes.TASKS_LOADING });
 
      try {
-          const res = await fetch(`http://localhost:8080/subtask/${subTaskId}`, {
+          const res = await fetch(`https://kanban-board-app-50he.onrender.com/${subTaskId}`, {
                method: "PATCH",
                body: JSON.stringify(updates),
                headers: {
@@ -351,7 +351,7 @@ export const deleteSubTask = (subTaskId, taskId, boardId, toastMsg) => async (di
      dispatch({ type: taskTypes.TASKS_LOADING });
 
      try {
-          const res = await fetch(`http://localhost:8080/subtask/${subTaskId}`, {
+          const res = await fetch(`https://kanban-board-app-50he.onrender.com/${subTaskId}`, {
                method: "DELETE",
                body: JSON.stringify({ taskId }),
                headers: {
