@@ -264,7 +264,7 @@ input:focus {
 }
 
 .task-heading {
-  font-size: 18px;
+  font-size: 17px;
   font-weight: 600;
   background-color: var(--primary-todo-heading);
   border-radius: 8px;
