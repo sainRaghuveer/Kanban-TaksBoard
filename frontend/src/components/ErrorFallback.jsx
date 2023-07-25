@@ -17,7 +17,7 @@ export default function ErrorFallback({ error, resetErrorBoundary }) {
                     backgroundColor='var(--primary-color)'
                     color='#fff'
                     onClick={resetErrorBoundary}>
-                    Try Again
+                    Try Again...
                </Button>
           </Box>
      );
