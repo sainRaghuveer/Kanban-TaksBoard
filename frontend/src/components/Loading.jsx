@@ -5,7 +5,7 @@ function Loading() {
           <Center minH='100svh'>
                <VStack gap='20px'>
                     <Spinner color='var(--primary-color)' thickness='4px' size='xl' />
-                    <Heading size="md">Please Wait...</Heading>
+                    <Heading size="md">Please Wait..!</Heading>
                </VStack>
           </Center>
      )
