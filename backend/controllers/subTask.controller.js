@@ -66,7 +66,7 @@ const deleteSubTask = async (req, res) => {
 
           await SubTaskModel.findByIdAndDelete(subTaskId);
 
-          res.status(200).send({ message: `SubTask deleted from ${task.title}` })
+          res.status(200).send({ message: `SubTask deleted from ${task.title}` });
      } catch (error) {
           console.log('error:', error)
           res.status(500).send({ message: error.message, error });
