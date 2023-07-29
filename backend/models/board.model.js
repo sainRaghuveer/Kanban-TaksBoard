@@ -16,7 +16,7 @@ const boardSchema = mongoose.Schema({
                ref: 'task'
           }
      ]
-}, { timestamps: true })
+}, { timestamps: true });
 
 const BoardModel = mongoose.model('board', boardSchema);
 
