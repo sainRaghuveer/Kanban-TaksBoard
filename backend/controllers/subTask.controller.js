@@ -20,7 +20,7 @@ const createSubTask = async (req, res) => {
                }))
           } catch (error) {
                console.log('error in subtask creation:', error)
-               res.status(500).send({ mesesage: error.message, error });
+               res.status(500).send({ message: error.message, error });
                return;
           }
 
