@@ -9,7 +9,7 @@ const subTaskSchema = mongoose.Schema({
           type: Boolean,
           default: false
      }
-}, { timestamps: true })
+}, { timestamps: true });
 
 const SubTaskModel = mongoose.model('subtask', subTaskSchema);
 
