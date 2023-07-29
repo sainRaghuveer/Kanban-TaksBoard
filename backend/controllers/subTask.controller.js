@@ -7,7 +7,7 @@ const createSubTask = async (req, res) => {
      try {
           const task = await TaskModel.findById(taskId);
 
-          // if the subtask is not comming in an array format then making it an array;
+          // if the subtask is not coming in an array format then making it an array;
           if (subtasks.length === undefined) subtasks = [req.body];
 
           // storing all the subtask's ids;
@@ -60,7 +60,7 @@ const deleteSubTask = async (req, res) => {
      try {
           const task = await TaskModel.findById(taskId);
 
-          // ? Delete the subtask reference from the task;
+          //  Delete the subtask reference from the task;
           task.subtask = task.subtask.filter(el => el.toString() !== subTaskId);
           await task.save();
 
