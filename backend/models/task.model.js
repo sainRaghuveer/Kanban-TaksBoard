@@ -23,7 +23,7 @@ const taskSchema = mongoose.Schema({
                ref: 'subtask'
           }
      ]
-}, { timestamps: true })
+}, { timestamps: true });
 
 const TaskModel = mongoose.model('task', taskSchema);
 
