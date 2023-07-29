@@ -9,10 +9,10 @@ import { ErrorBoundary } from 'react-error-boundary'
  * errorFallback => if the lazily loaded component is not rendered then this
  *                  'errorFallback' component will render
  * 
- * suspenceFallback => when the lazily loaded component will load for that initial
- *                     time this 'suspenceFallback' component will render
+ * suspenseFallback => when the lazily loaded component will load for that initial
+ *                     time this 'suspenseFallback' component will render
  *  ---
- * Suspence => it will show the 'fallback' component untill file is loaded lazily
+ * Suspense => it will show the 'fallback' component until file is loaded lazily
  * 
  * ErrorBoundary => while loading the 'lazily loaded component' if we got any error 
  *                  then this 'ErrorBoundary' will show the 'FallbackComponent' to 

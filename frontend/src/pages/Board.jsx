@@ -22,8 +22,8 @@ const TaskSection = lazy(() => import('../components/TaskSection'));
 
 
 function Board() {
-     const { loading, error, data: board } = useSelector(store => store.tasksManager)
-     const dispatch = useDispatch()
+     const { loading, error, data: board } = useSelector(store => store.tasksManager);
+     const dispatch = useDispatch();
      const toastMsg = useToastMsg();
 
      const handleDragEnd = (result) => {
