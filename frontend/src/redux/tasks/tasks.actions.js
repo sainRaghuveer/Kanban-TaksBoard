@@ -25,7 +25,7 @@ export const getTasks = (boardId, navigate) => async (dispatch) => {
      dispatch({ type: taskTypes.TASKS_LOADING })
 
      abortController?.abort();
-     
+
      abortController = new AbortController();
 
      try {
