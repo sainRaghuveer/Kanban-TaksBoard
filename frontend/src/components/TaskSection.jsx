@@ -6,7 +6,6 @@ import React, { useEffect, useState } from 'react';
 import Task from './Task'
 
 function TaskSection({ title }) {
-    console.log({title})
      const { data: board } = useSelector(store => store.tasksManager);
 
      const [filteredTasks, setFilteredTasks] = useState([])
