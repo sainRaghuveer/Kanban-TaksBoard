@@ -4,11 +4,11 @@ const { createSubTask, updateSubTask, deleteSubTask } = require("../controllers/
 const subTaskRouter = express.Router();
 
 // ! Pass the task's id in which we need to add the subtasks
-subTaskRouter.post("/:id", createSubTask)
+subTaskRouter.post("/:id", createSubTask);
 
 // ! Pass a single subTask's id to change it or update it
-subTaskRouter.patch("/:id", updateSubTask)
+subTaskRouter.patch("/:id", updateSubTask);
 
-subTaskRouter.delete("/:id", deleteSubTask)
+subTaskRouter.delete("/:id", deleteSubTask);
 
 module.exports = subTaskRouter;
