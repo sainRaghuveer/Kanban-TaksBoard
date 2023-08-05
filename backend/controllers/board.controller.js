@@ -60,7 +60,7 @@ const updateBoard = async (req, res) => {
           console.log('error:', error)
           res.status(500).send({ message: error.message, error });
      }
-}
+};
 
 
 const deleteBoard = async (req, res) => {
@@ -86,6 +86,6 @@ const deleteBoard = async (req, res) => {
           console.log('error:', error)
           res.status(500).send({ message: error.message, error });
      }
-}
+};
 
 module.exports = { getAllBoards, getSingleBoard, createBoard, updateBoard, deleteBoard };
