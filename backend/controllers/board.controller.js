@@ -13,7 +13,7 @@ const getAllBoards = async (req, res) => {
           console.log('error:', error);
           res.status(500).send({ message: error.message, error });
      }
-}
+};
 
 
 const getSingleBoard = async (req, res) => {
@@ -32,7 +32,7 @@ const getSingleBoard = async (req, res) => {
           console.log('error:', error);
           res.status(500).send({ message: error.message, error });
      }
-}
+};
 
 
 const createBoard = async (req, res) => {
