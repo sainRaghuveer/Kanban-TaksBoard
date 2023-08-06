@@ -31,7 +31,7 @@ app.use('/subtask', subTaskRouter);
 // ! Wrong URL-Endpoint
 app.use('/', (req, res) => {
      res.status(404).send({message: 'Invalid URL-endpoint!'})
-})
+});
 
 
 app.listen(process.env.PORT ?? 8080, async () => {
