@@ -16,4 +16,4 @@ export default function lazyLoad(path, namedExport) {
                return promise;
           }
      })
-}
+};
