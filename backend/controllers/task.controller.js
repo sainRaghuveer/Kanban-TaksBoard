@@ -42,7 +42,7 @@ const createTask = async (req, res) => {
           console.log('error:', error);
           res.status(500).send({ message: error.message, error });
      }
-}
+};
 
 
 const updateTask = async (req, res) => {
@@ -56,7 +56,7 @@ const updateTask = async (req, res) => {
           console.log('error:', error)
           res.status(500).send({ message: error.message, error });
      }
-}
+};
 
 
 const deleteTask = async (req, res) => {
@@ -85,7 +85,7 @@ const deleteTask = async (req, res) => {
           console.log('error:', error)
           res.status(500).send({ message: error.message, error });
      }
-}
+};
 
 
 module.exports = { createTask, updateTask, deleteTask };
