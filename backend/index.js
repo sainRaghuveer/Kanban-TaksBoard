@@ -43,4 +43,4 @@ app.listen(process.env.PORT ?? 8080, async () => {
      } catch (error) {
           console.log('❌ error:', error.message);
      }
-})
+});
