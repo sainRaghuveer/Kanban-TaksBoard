@@ -8,6 +8,6 @@ function Error({ children, CN }) {
                {children}
           </VStack>
      )
-}
+};
 
 export default React.memo(Error);
