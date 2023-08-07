@@ -59,7 +59,7 @@ export const signin = (cred, navigate, toastMsg) => async (dispatch) => {
           toastMsg({
                title: data.message,
                status: res.ok ? 'success' : 'warning',
-          })
+          });
 
      } catch (error) {
           console.log('error:', error);
@@ -94,8 +94,7 @@ export const signup = (cred, navigate, toastMsg) => async (dispatch) => {
                status: 'warning'
           })
           return;
-     }
-
+     };
      // ? PASSWORD VERIFIER
      if (cred.password.length <= 5) {
           toastMsg({
