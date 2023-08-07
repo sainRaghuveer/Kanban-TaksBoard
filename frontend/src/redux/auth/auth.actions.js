@@ -101,7 +101,7 @@ export const signup = (cred, navigate, toastMsg) => async (dispatch) => {
           toastMsg({
                title: 'Password must contain more than 5 char!',
                status: 'warning'
-          })
+          });
           return;
      }
 
