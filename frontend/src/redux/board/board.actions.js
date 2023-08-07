@@ -26,7 +26,7 @@ export const getBoards = (navigate) => async (dispatch) => {
                headers: {
                     'authorization': sessionStorage.getItem("TOKEN"),
                }
-          })
+          });
           const data = await res.json();
 
           if (res.ok) {
@@ -139,7 +139,7 @@ export const deleteBoard = (boardId) => async (dispatch) => {
                dispatch({ type: DELETE_TASKS });
                dispatch(getBoards());
           } else {
-               dispatch({ type: boardTypes.BOARD_ERROR, payload: data.message })
+               dispatch({ type: boardTypes.BOARD_ERROR, payload: data.message });
           }
 
           // * IF TOKEN EXPIRED
