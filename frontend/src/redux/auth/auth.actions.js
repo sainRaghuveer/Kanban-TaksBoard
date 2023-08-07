@@ -38,7 +38,7 @@ export const signin = (cred, navigate, toastMsg) => async (dispatch) => {
                headers: {
                     'Content-Type': 'application/json'
                }
-          })
+          });
 
           const data = await res.json();
 
