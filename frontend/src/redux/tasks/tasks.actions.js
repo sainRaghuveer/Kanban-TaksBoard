@@ -40,7 +40,7 @@ export const getTasks = (boardId, navigate) => async (dispatch) => {
 
           // * IF TOKEN EXPIRED
           if (res.status === 401) {
-               dispatch({ type: AUTH_LOGOUT })
+               dispatch({ type: AUTH_LOGOUT });
                alert(`Session Expired! \n Please Login again.. ${savedNavigate ? savedNavigate('/signin') : window.location.replace('/signin')}`)
                return;
           }
