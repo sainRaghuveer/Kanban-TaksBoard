@@ -114,7 +114,7 @@ export const signup = (cred, navigate, toastMsg) => async (dispatch) => {
                headers: {
                     'Content-Type': 'application/json'
                }
-          })
+          });
 
           const data = await res.json();
 
