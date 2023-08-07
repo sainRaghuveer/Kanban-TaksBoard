@@ -5,7 +5,7 @@ const initialState = {
      error: false,
      isAuth: false,
      user: {},
-}
+};
 
 
 export const reducer = (state = initialState, { type, payload }) => {
