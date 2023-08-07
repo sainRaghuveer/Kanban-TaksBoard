@@ -124,7 +124,7 @@ export const signup = (cred, navigate, toastMsg) => async (dispatch) => {
                dispatch({ type: authTypes.AUTH_LOGOUT })
                alert(`Session Expired! \n Please Login again.. ${navigate ? navigate('/signin') : window.location.replace('/signin')}`)
                return;
-          }
+          };
 
           if (res.ok) navigate('/signin');
           dispatch({ type: res.ok ? authTypes.AUTH_SUCCESS : authTypes.AUTH_ERROR });
