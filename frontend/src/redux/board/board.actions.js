@@ -150,6 +150,6 @@ export const deleteBoard = (boardId) => async (dispatch) => {
           }
      } catch (error) {
           console.log('error:', error)
-          dispatch({ type: boardTypes.BOARD_ERROR, payload: error.message })
+          dispatch({ type: boardTypes.BOARD_ERROR, payload: error.message });
      }
 }
