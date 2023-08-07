@@ -22,7 +22,7 @@ export const getTasks = (boardId, navigate) => async (dispatch) => {
 
      if (!boardId) return;
 
-     dispatch({ type: taskTypes.TASKS_LOADING })
+     dispatch({ type: taskTypes.TASKS_LOADING });
 
      abortController?.abort();
 
